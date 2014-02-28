@@ -5,6 +5,7 @@ require 'sinatra'
 require 'json'
 require 'digest/sha2'
 
+$stdout.sync = true
 class TravisWebhook < Sinatra::Base
   set :token, ENV['TRAVIS_USER_TOKEN']
 
